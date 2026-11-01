@@ -1,0 +1,63 @@
+LLMs -> Large Language Models 
+GPT -> Generative Pre-Trained Transformer
+
+Genarative means it generates the data unlike google , bing n all when you ask something to them the just crawl the internet and gives you the answer thast why they known as serach engine 
+
+and in LLMs when you ask something they generate the next sequemnce of words according to your query 
+and it generates the content with the pre trained data 
+trnasformer is basically and architecture on which all the ai application works 
+
+what transformer actually does ? 
+so it basically transform one particular input into an particular output 
+
+predict the next word
+
+step 1 -> Encoding phase 
+        tokenzing the words
+        tokenzition algorityhms varies model to model and every model has its own vocabulary size
+
+from transformers import AutoTokenzier
+tokenizer = AutoTokenizer.from_pretrained("model name")
+tokenzier("hey there")
+
+        VECTOR EMBEDDINGS
+        These are the numerical representations of data like words, images, or audio that capture semantic realtionships and meanings, allowing machine learning models to process and compare them efficiently 
+
+        basically what relationship a word have with something and what kind of relationship it have in the real world as well 
+
+        and the embeddings varies from model to model 
+
+STEP --> 2 ->> POSITIONAL ENCODING 
+            example -> the cat chased dog 
+                       the dog chased cat 
+            in this both gonna have the same vector embedding and deliver same meaning as well 
+
+            so position encoding add some data about the position of the tokens 
+
+            Positional encoding does not replace word embeddings. It adds position information to them.
+
+            Example
+                Sentence: "I love AI"
+                Token	Position	Input to Transformer
+                I	0	Embedding(I) + PE(0)
+                love	1	Embedding(love) + PE(1)
+                AI	2	Embedding(AI) + PE(2)
+
+In one line: Positional embedding provides information about the position of each token so the Transformer can understand word order and sequence structure.
+
+
+Self Attention [Single head self Attention]
+    suppose there is some senternce like "the river bank" and aftre that there is some embeddings created then those vector emebediing some right that they can talk to each other and change their vector embedding
+
+    basically here the context of the word is maintained and it related words/tokens with each other 
+
+
+MULTI HEAD Attention
+        it improves the contextual understanding 
+        it takes different sentences at the same time and then combines them to understand everything in a better way 
+
+CONTEXT IS EVERYTHING
+
+        softmax is responsible for picking up the values in the transformer 
+
+TEMPERATURE -> it basically controls the creativity of the output the higher the temperature is the creative the answer you gonna get 
