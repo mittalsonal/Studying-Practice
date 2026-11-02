@@ -1,0 +1,78 @@
+We dont use HTTP because it is not secure instead we use HTTPs because it is secure and it is a TCP connection and HTTP is not use in any real world project.
+
+we have two types of scaling :
+    vertical scaling 
+    horizontal scaling 
+
+VERTICAL SCALING 
+    here we have :
+        big serves like :
+            more CPU
+            more RAM
+
+            but here we gonna have single point of failure 
+            like if the serves gets down the entire application will get down
+
+
+
+HORIZONTAL SCALING 
+    hereb instead of adding one big server we add multiple normal servers 
+
+    here because of multiple server even if one is down , the other two servers are still up. hence overall service is up and functional
+
+
+But here we have a issue :
+    clinet only have one ip address and it dosent knwo which server to talk to ...so to talk this problem we have one more component named LOAD BALANCER
+
+
+LOAD BALANCER 
+    it sits in front of the server and now the client dosen't talk directly talks to the sserver it first talk to the load balancer 
+
+    so whenever the client makes any reuest so the reqquest is first send to the load balancer and then the load balancer dicide which server will get the which reqquest
+
+    and there is three ways to do that :
+        round robin
+        least connection
+        IP hashing 
+
+        round robin: 
+            distribute request to each server in a uniform way in round robin fashion
+            this is good when we have uniform request 
+
+        least connection :
+            it sends request to whichever server has the fewest active connection right now 
+            this is good when we have non uniform request
+
+        IP Hashing:
+            sometimes we want same client to go to the same server  
+            suppose we have client 1 and want him to go on app server 1 always 
+            this is useful when we want sticky session
+            
+            lets say the request is not independent and it takes some of the data from the server side 
+            and our server should have the contect of previous context as well 
+
+
+LAYER 4 LOAD BALANCER 
+    this works with the transport layer 
+    it means they do the routing purely on the bases of IP and TCP port 
+    these are fast and lightweight 
+    it dosent have to look inside the request so they have no idea what it is inside the request so they consoder every request as same so they do routing basec on the IP and TCP port
+
+
+LAYER 7 LOAD BALANCER 
+    it works with the application layer 
+    it can understand your request and it can route your packet based on URL path,, header, cookies etc
+    and all moden load balancer such as AWS ALB, Ngnix all works at application layer 
+    
+
+Load balancer also does the health check 
+constaly pings the server "are you alive ?" it does for each and every server and if the server stops responding the load balancer automatically removes it from the rotation and stops sending traffic to it 
+
+so the new request automatically routed to the healthy server 
+
+
+Load balancer can also have a single point failure thats why we run multiple load balancer :
+    active active pair 
+    active passive pair 
+
+
