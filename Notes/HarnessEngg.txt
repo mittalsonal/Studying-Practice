@@ -1,0 +1,35 @@
+In AI agents the most important thing is the LLMs
+
+Harness add unique practicality to your ai agent 
+
+Memory 
+Observality
+Tools
+Agent Loop 
+security 
+context window
+these are the parts of harness 
+
+then we have to build Guardrails that too are the part of harness 
+
+the predictibilty we add around the output that is also the part of harness 
+
+
+for example 
+Claude :
+    Opus
+    fabble 
+    sonnet 
+        these are the AI engines 
+
+Claude Code :
+    this is the harness 
+    which is build on these ai enginess 
+
+
+Harness engineering referes to the dicipline of building the operational environment, tools, and constarints that make ai coding agents useful.
+
+Operates on the principal of :
+        AI Agent = AI Model + Harness 
+
+we can build anything in harness which adds value, preminiumness and practicality to it 
