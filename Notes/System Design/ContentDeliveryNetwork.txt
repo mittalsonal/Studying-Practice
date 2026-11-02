@@ -1,0 +1,57 @@
+CONTENT DELIVERY NETWORK
+
+Latency is the delay between doing something and seeing or hearing the result. 
+
+supoose original server is in US  -> user : singapore (Huge Latency)
+                                     user : Mumbai (Huge Latency)
+                                     user : california (Fast)
+
+    this situation is without CDN
+
+
+CDN is the globally distributed network server that we call edge server or edge nodes or point of presence or pops
+so with CDN in place whenever user request a static file, instead of hitting the origin server what we do is that we get it from the nearest edge or pop node 
+
+we basically create the edge node which is near to the user location and which basically reduces the latency 
+
+
+
+origin of server is US -> CDN edge node  -> user : singapore
+                            asia pop        user : mumbai
+                        
+                        -> CND edge node -> user : London
+                            europe pop
+
+
+suppose the edge node dosnt have any data asked by the singapore user so it get back to the origin server and get the data and next time if the user form mumbai ask for data it directly send it to the user as both singapore and mumbai user are on same edge node and this will provide the result faster
+
+
+if data is present in edge node we say it as CACHE HIT and if data is not present we say it as CACHE MISS 
+
+
+what belongs to CDN ?
+    images, video and audio files 
+    javascript bundles and CSS
+    fonts 
+    HTML for static sites 
+
+
+we only have static files in the CDN we do not store any dynamic files in CDN
+
+
+CACHE INVALIDATION
+        it is the process of removing the outdated content which is of no use or it has been updated 
+        suppose the html file got changed, but if we are not invalidating the exixting file  we will not get the latest file in our CND
+
+        TTL : Time to Live
+            what it does is that each cache files expires automatically after n minutes or n days because it is time to live 
+
+        Having a version filename
+            suppose we have file name like 
+                main.a1b1c1.js
+                main.a2b2c2.js
+                main.a3b3c5.js
+
+                here we have version file name this is what we use in production
+
+                
