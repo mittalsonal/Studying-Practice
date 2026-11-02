@@ -1,0 +1,1 @@
+A Vector Database is a special type of database that stores information as vectors (numerical representations called embeddings) and allows us to search for information based on its meaning rather than just exact keywords.
