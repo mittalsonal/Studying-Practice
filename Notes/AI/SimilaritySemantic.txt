@@ -1,0 +1,19 @@
+Similarity Search vs Semantic Search are closely related, but they are not exactly the same.
+
+The simplest difference is:
+    - Similarity Search: Finds things that are similar based on a comparison method.
+    - Semantic Search: Finds things that have similar meanings, even when the words are different.
+
+Similarity search compares your query with the stored sentences using a similarity measure.
+
+Semantic search focuses on understanding the meaning behind your query, rather than just matching words.
+
+Here's what happens:
+1. The user asks: "How do I repair my computer?"
+2. An embedding model converts the question into a numerical vector.
+3. The vector database stores embeddings of your documents.
+4. Similarity search compares the query vector against stored vectors using cosine similarity or another distance metric.
+5. The system retrieves documents that are semantically relevant.
+Important: Semantic search often uses similarity search internally.
+
+So they are not two completely separate techniques.
