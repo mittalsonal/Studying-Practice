@@ -144,3 +144,20 @@ The important distinction is that the vector database retrieves information, whi
         Answer grounded in retrieved evidence
 
         But hallucinations can still happen if the retrieved information is irrelevant, outdated, contradictory, or misunderstood by the LLM.
+
+
+
+Vector databases don't use only cosine similarity. They can use different similarity or distance metrics.
+
+The three most common are:
+1. Cosine Similarity
+2. Euclidean Distance (L2)
+3. Dot Product (Inner Product)
+
+We don't necessarily use only cosine similarity in vector databases. We can also use Euclidean distance and dot product.
+
+Cosine similarity is commonly preferred for semantic search because it measures the angle between embedding vectors rather than their magnitude. This makes it useful for identifying text with similar meaning, even if their vector lengths differ.
+
+However, the best similarity metric depends on how the embedding model was trained."
+
+One thing to remember: The embedding model creates the semantic representation. Cosine similarity simply measures how similar those representations are.
