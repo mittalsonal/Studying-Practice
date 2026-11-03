@@ -1,0 +1,20 @@
+A context window is the maximum amount of information an LLM can process together during one model request.
+
+
+This information can include:
+- System instructions
+- Conversation history
+- Current user message
+- Retrieved documents from RAG
+- Tool calls and tool responses
+- Other content such as images, depending on the model
+
+What is a token?
+    A token is a unit of text processed by an LLM.
+    It can be a word, part of a word, punctuation, or another text unit.
+
+    Sentence:
+        "I love artificial intelligence!"
+
+    Possible tokenization:
+        ["I", " love", " artificial", " intelligence", "!"]
