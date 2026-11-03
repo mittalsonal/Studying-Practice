@@ -1,0 +1,53 @@
+AI Agent = An AI system that performs tasks using tools and makes decisions.
+
+Agentic AI = A broader approach to building AI systems that can autonomously plan, make decisions, take actions, and adapt to achieve goals.
+
+
+What is an AI Agent?
+Imagine you build a chatbot for booking doctor appointments.
+
+The user says:
+
+"Book an appointment with Dr. Sharma tomorrow at 5 PM."
+
+Your AI agent can:
+1. Understand the request.
+2. Check available appointment slots using an API.
+3. Confirm the required details.
+4. Book the appointment.
+5. Send a confirmation.
+
+This is an AI agent because it can use tools and determine actions based on the user's request and the results it receives.
+
+What is Agentic AI?
+Now imagine a more advanced system.
+
+The user says:
+
+"Help me manage my clinic appointments and reduce patient no-shows."
+
+This isn't just one specific task. It's a broader goal.
+
+An agentic AI system might:
+1. Analyze appointment history.
+2. Identify patterns in missed appointments.
+3. Develop a reminder strategy.
+4. Schedule reminders through authorized tools.
+5. Monitor the results.
+6. Adjust the strategy based on feedback.
+This involves goal-directed planning, tool use, feedback, and adapting over time.
+
+
+Does Agentic AI always mean multiple agents?
+No. This is a common misconception.
+
+An agentic AI system can be built with:
+- Single agent: One LLM-driven agent with tools, memory, and a planning loop.
+- Multiple agents: Specialized agents collaborating on a larger task.
+For example, an automated software development system might use a planner, coding agent, testing agent, and review agent.
+
+But a single coding agent that independently plans, edits files, runs tests, and fixes errors can also demonstrate agentic AI behavior.
+
+Multiple agents do not automatically make a system better. They can introduce coordination complexity, cost, and latency.
+
+AI Agent is the system you build. Agentic AI describes how autonomously that system can work toward a goal.
