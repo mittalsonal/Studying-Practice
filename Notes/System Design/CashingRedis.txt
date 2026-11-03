@@ -1,2 +1,8 @@
 it basically helps to send the reponse for the dynamic request
 
+Redis is mainly used to make applications faster by storing frequently accessed data in memory (RAM), instead of repeatedly fetching it from a database.
+
+But Redis is not just a caching tool. It's also widely used for sessions, OTPs, rate limiting, background jobs, queues, and real-time applications.
+
+Redis stands for Remote Dictionary Server. It's an extremely fast, in-memory data store.
+
