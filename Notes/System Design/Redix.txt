@@ -1,0 +1,21 @@
+Redis (Remote Dictionary Server) is a super-fast, in-memory data store used for caching, session management, background jobs, rate limiting, and real-time applications.
+
+In simple terms, Redis helps your application become faster, more scalable, and efficient.
+
+For example:
+    Imagine 1,000 users requesting the same trending AI topics.
+    Without Redis, your backend might repeatedly query PostgreSQL or external APIs for the same information.
+    With Redis, your backend can temporarily store the results in memory and reuse them.
+
+Redis stores frequently accessed data in RAM, making retrieval very fast.
+
+
+What is Redis used for?
+
+    Caching	-> Stores frequently requested data so repeated requests are faster.
+    Session management -> Stores login sessions and temporary user information.
+    Background jobs -> Works with workers and job queues to process tasks asynchronously.
+    Rate limiting -> Limits how many API requests a user can make.
+    Real-time systems -> Supports Pub/Sub messaging and event distribution.
+    Temporary data -> Stores OTPs, short-lived tokens, and temporary processing states.
+
